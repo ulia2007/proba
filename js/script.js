@@ -1,21 +1,18 @@
-"use strict";
+const numberOfFilms = +prompt('Скоьлко фильмов вы уже посмотрели', '')
 
-console.log('arr' + '- object');
-console.log(4 + '- object');
-console.log(8 + +'6');
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-let incr = 10,
-    decr = 10;
+const a = prompt('Один из последних просмотреных фильмов?', ''),
+      b = prompt('На сколько оцените его', ''),
+      c = prompt('Один из последних просмотреных фильмов?', ''),
+      d = prompt('На сколько оцените его', '');
+personalMovieDB.movies[a] = b,
+personalMovieDB.movies[c] = d;
 
-/* incr++;     //инкремент декремент увеличивает число или уменьшает
-decr--; */
-console.log(incr); //если тут написать инкремент декремент после переменной ничего не произойдет
-console.log(decr);
-
-console.log(5%2); // % - показывает остаток от деления, в 5 помещаеться 2 двойки, остаток 1
-console.log(2*4 == 8); // == сравнивает данные лево и право, булевые,3 знака равно это строгое сравнение по типу данных
-
-const isChecked = true,
-      isClose = true;
-console.log(isChecked && isClose); //&& - сравнивает переменные, оператор и
-console.log(isChecked || isClose); // || - оператор или, одно из условий тру, то возвращаеться правда
+console.log(personalMovieDB);
